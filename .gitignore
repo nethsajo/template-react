@@ -9,8 +9,6 @@ dist
 .env
 .env.*
 .env-encoded
-.npmrc
-*.tsbuildinfo
 
 !**.example
 
