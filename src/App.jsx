@@ -5,7 +5,7 @@ const App = () => {
 
   return (
     <div>
-      <h2>App</h2>
+      <h2 className='font-bold'>App</h2>
     </div>
   );
 };
