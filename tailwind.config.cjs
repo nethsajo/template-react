@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'max-xs': { max: '280px' },
+      },
       fontFamily: {
         inter: ['Inter', 'sans-serif'],
       },
@@ -27,9 +30,9 @@ module.exports = {
           '-moz-osx-font-smoothing': 'grayscale',
         },
 
-				'.transparent-tap-highlight': {
-					'-webkit-tap-highlight-color': 'transparent'
-				}
+        '.transparent-tap-highlight': {
+          '-webkit-tap-highlight-color': 'transparent',
+        },
       });
     }),
   ],
