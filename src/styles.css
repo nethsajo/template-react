@@ -1,3 +1,38 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply box-border scrollbar-hide font-smoothing transparent-tap-highlight;
+  }
+
+  *::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  html,
+  body {
+    @apply m-0 h-full w-full p-0 font-inter font-normal;
+  }
+
+  #root {
+    @apply relative h-full w-full;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 30px #eff0f4 inset;
+  }
+
+  input:-webkit-autofill {
+    -webkit-text-fill-color: #000000 !important;
+  }
+}
+
+@layer components {
+}

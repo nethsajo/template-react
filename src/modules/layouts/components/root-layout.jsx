@@ -1,5 +1,5 @@
 import React from 'react';
 
 export const RootLayout = ({ children }) => {
-  return <div>{children}</div>;
+  return <div className="relative h-full">{children}</div>;
 };

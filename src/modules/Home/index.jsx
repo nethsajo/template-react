@@ -1,7 +1,8 @@
+import { PageLayout } from '@Modules/layouts';
 import React from 'react';
 
 const Home = () => {
-  return <div>Home</div>;
+  return <PageLayout>Home</PageLayout>;
 };
 
 export default Home;
