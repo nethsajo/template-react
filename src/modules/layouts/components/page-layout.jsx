@@ -1,7 +1,12 @@
+import { Footer, Navbar } from '@Modules/partials';
 import React from 'react';
 
-const PageLayout = () => {
-  return <div>PageLayout</div>;
+export const PageLayout = ({ children }) => {
+  return (
+    <>
+      <Navbar />
+      <main className="main-container">{children}</main>
+      <Footer />
+    </>
+  );
 };
-
-export default PageLayout;
