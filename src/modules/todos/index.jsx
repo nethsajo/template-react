@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Todos = () => {
+function Todos() {
   return <div>Todos</div>;
-};
+}
 
 export default Todos;

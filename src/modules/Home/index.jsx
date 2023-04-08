@@ -1,8 +1,15 @@
 import { PageLayout } from '@Modules/layouts';
-import React from 'react';
+import { ReactComponent as ReactSVG } from '@Shared/assets/react.svg';
 
-const Home = () => {
-  return <PageLayout>Home</PageLayout>;
-};
+function Home() {
+  return (
+    <PageLayout>
+      <div className="flex items-center">
+        <h2>Home</h2>
+        <ReactSVG />
+      </div>
+    </PageLayout>
+  );
+}
 
 export default Home;

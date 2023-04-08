@@ -2,8 +2,6 @@ import React from 'react';
 
 const AsyncHome = React.lazy(() => import('@Modules/home'));
 
-const HomePage = () => {
-  return <AsyncHome />;
-};
+const HomePage = () => <AsyncHome />;
 
 export default HomePage;

@@ -8,9 +8,7 @@ export const getLocalStorage = key => {
   return localStorage[key];
 };
 
-export const getAllLocalStorage = () => {
-  return localStorage;
-};
+export const getAllLocalStorage = () => localStorage;
 
 export const removeLocalStorage = key => {
   localStorage.removeItem(key);

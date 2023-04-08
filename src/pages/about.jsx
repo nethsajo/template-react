@@ -2,8 +2,6 @@ import React from 'react';
 
 const AsyncAbout = React.lazy(() => import('@Modules/about'));
 
-const AboutPage = () => {
-  return <AsyncAbout />;
-};
+const AboutPage = () => <AsyncAbout />;
 
 export default AboutPage;
