@@ -9,7 +9,8 @@
     "preview": "vite preview",
     "format": "prettier --write ./src/**/*.js{,x}",
     "lint": "eslint ./src --ext .js,.jsx,",
-    "lint:fix": "eslint ./src --fix --ext .js,.jsx,"
+    "lint:fix": "eslint ./src --fix --ext .js,.jsx,",
+    "prepare": "husky install"
   },
   "dependencies": {
     "date-fns": "^2.29.3",
@@ -32,6 +33,8 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^12.4.1",
     "postcss": "^8.4.21",
     "prettier": "^2.8.7",
     "prettier-plugin-tailwindcss": "^0.2.6",
@@ -40,5 +43,9 @@
     "vite-jsconfig-paths": "^2.0.1",
     "vite-plugin-pages": "^0.29.0",
     "vite-plugin-svgr": "^2.4.0"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": "eslint --cache --fix",
+    "**/*": "prettier --write --ignore-unknown"
   }
 }
