@@ -1,5 +1,5 @@
-import React from 'react';
-
-const TodoPage = () => <div>TodoPage</div>;
+const TodoPage = () => {
+  return <div>TodoPage</div>;
+};
 
 export default TodoPage;
