@@ -1,0 +1,27 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "pnpm",
+    "commitlint",
+    "vite",
+    "WORKDIR",
+    "svgr",
+    "esbuild",
+    "postcss",
+    "accum",
+    "zustand",
+    "immer",
+    "tailwindcss",
+    "tanstack",
+    "opentype",
+    "truetype",
+    "pallete",
+    "browserconfig",
+    "msapplication",
+    "mstile",
+    "todos",
+    "couldn"
+  ],
+  "ignorePaths": ["node_modules", "build", "dist", ".husky", "pnpm-lock.yaml", "package.json"]
+}

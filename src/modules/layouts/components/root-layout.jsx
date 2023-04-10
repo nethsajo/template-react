@@ -1,3 +1,3 @@
-import React from 'react';
-
-export const RootLayout = ({ children }) => <div className="relative h-full">{children}</div>;
+export const RootLayout = ({ children }) => {
+  return <div className="relative h-full">{children}</div>;
+};

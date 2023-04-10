@@ -1,7 +1,5 @@
-import React from 'react';
-
-function Todos() {
+const Todos = () => {
   return <div>Todos</div>;
-}
+};
 
 export default Todos;
