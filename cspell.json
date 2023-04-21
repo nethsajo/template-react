@@ -21,7 +21,8 @@
     "msapplication",
     "mstile",
     "todos",
-    "couldn"
+    "couldn",
+    "bankist"
   ],
   "ignorePaths": ["node_modules", "build", "dist", ".husky", "pnpm-lock.yaml", "package.json"]
 }

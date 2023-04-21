@@ -1,4 +1,5 @@
 import Counter from './components/Counter';
+import Samples from './components/Samples';
 
 import { IoLogoReact } from 'react-icons/io5';
 
@@ -10,6 +11,7 @@ const Home = () => {
         Template React
       </h1>
       <Counter />
+      <Samples />
     </div>
   );
 };
