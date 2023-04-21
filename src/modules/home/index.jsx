@@ -1,12 +1,16 @@
-import { PageLayout } from '@Modules/layouts';
+import Counter from './components/Counter';
+
+import { IoLogoReact } from 'react-icons/io5';
 
 const Home = () => {
   return (
-    <PageLayout>
-      <div className="flex items-center">
-        <h2>Home</h2>
-      </div>
-    </PageLayout>
+    <div className="flex flex-col items-center justify-center gap-11 px-6 py-9 sm:px-12">
+      <IoLogoReact className="h-16 w-16 text-cyan-500 sm:h-24 sm:w-24" />
+      <h1 className="text-center text-4xl font-extrabold text-slate-500 sm:text-6xl">
+        Template React
+      </h1>
+      <Counter />
+    </div>
   );
 };
 
