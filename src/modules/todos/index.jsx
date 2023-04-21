@@ -1,5 +1,11 @@
+import { PageLayout } from '@Modules/layouts';
+
 const Todos = () => {
-  return <div>Todos</div>;
+  return (
+    <PageLayout>
+      <div>Todos</div>
+    </PageLayout>
+  );
 };
 
 export default Todos;

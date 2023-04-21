@@ -1,5 +1,11 @@
+import { PageLayout } from '@Modules/layouts';
+
 const About = () => {
-  return <div>About</div>;
+  return (
+    <PageLayout>
+      <div>About</div>
+    </PageLayout>
+  );
 };
 
 export default About;

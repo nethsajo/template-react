@@ -1,3 +1,34 @@
-import React from 'react';
+import { ROUTES } from '@Shared/constants/common';
 
-export const Navbar = () => <div>Navbar</div>;
+import { Link } from 'react-router-dom';
+
+export const Navbar = () => {
+  return (
+    <div className="flex h-24 w-full items-center bg-gray-100 px-6">
+      <div className="container mx-auto flex h-full items-center justify-between">
+        <Link to={ROUTES.HOME} className="font-bold">
+          TemplateReact
+        </Link>
+        <nav>
+          <ul className="flex items-center space-x-6 font-semibold text-slate-500">
+            <li>
+              <Link to={ROUTES.HOME} className="ease transition duration-500 hover:text-blue-600">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to={ROUTES.ABOUT} className="ease transition duration-500 hover:text-blue-600">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to={ROUTES.TODOS} className="ease transition duration-500 hover:text-blue-600">
+                Todos
+              </Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  );
+};
