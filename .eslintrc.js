@@ -41,10 +41,11 @@ module.exports = {
   rules: {
     'react/prop-types': 'off',
     'react/display-name': 'off',
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'error',
+    'react/jsx-props-no-spreading': 'off',
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
     'react/function-component-definition': [
       2,
       {

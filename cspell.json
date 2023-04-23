@@ -22,7 +22,8 @@
     "mstile",
     "todos",
     "couldn",
-    "bankist"
+    "bankist",
+    "hookform"
   ],
   "ignorePaths": ["node_modules", "build", "dist", ".husky", "pnpm-lock.yaml", "package.json"]
 }
