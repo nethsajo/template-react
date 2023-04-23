@@ -21,8 +21,8 @@ const Todos = () => {
       <h1 className="text-center text-4xl font-extrabold text-slate-500 sm:text-6xl">TodoMate</h1>
       <div className="mx-auto w-full max-w-3xl rounded-md border-[#ebeef2] bg-white px-6 py-8 shadow-[0_1px_3px_rgba(96,108,128,0.05)]">
         <form onSubmit={handleSubmit(handleTodos)}>
-          <div className="">
-            <label htmlFor="title" className="mb-4 flex flex-col">
+          <div className="mb-4">
+            <label htmlFor="title" className="mb-2 flex flex-col">
               <span className="mb-2 font-bold text-slate-500">Task</span>
               <input
                 type="text"
@@ -32,11 +32,11 @@ const Todos = () => {
               />
             </label>
             {formState.errors?.title?.message && (
-              <p className="text-sm text-red-500">{formState.errors.title.message}</p>
+              <p className="text-sm font-semibold text-red-500">{formState.errors.title.message}</p>
             )}
           </div>
-          <div className="">
-            <label htmlFor="description" className="mb-4 flex flex-col">
+          <div className="mb-4">
+            <label htmlFor="description" className="mb-2 flex flex-col">
               <span className="mb-2 font-bold text-slate-500">Description</span>
               <textarea
                 rows={3}
@@ -46,7 +46,9 @@ const Todos = () => {
               />
             </label>
             {formState.errors?.description?.message && (
-              <p className="text-sm text-red-500">{formState.errors.description.message}</p>
+              <p className="text-sm font-semibold text-red-500">
+                {formState.errors.description.message}
+              </p>
             )}
           </div>
           <div className="mt-8 flex sm:justify-end">
