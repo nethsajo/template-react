@@ -1,10 +1,10 @@
-import { todoSchema } from './validations';
+import { todoSchema } from '../validations';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { RiTodoLine } from 'react-icons/ri';
 
-const Todos = () => {
+export const Todos = () => {
   const { handleSubmit, register, formState } = useForm({
     resolver: zodResolver(todoSchema),
     defaultValues: {
@@ -23,7 +23,7 @@ const Todos = () => {
         <form onSubmit={handleSubmit(handleTodos)}>
           <div className="mb-4">
             <label htmlFor="title" className="mb-2 flex flex-col">
-              <span className="mb-2 font-bold text-slate-500">Task</span>
+              <span className="mb-2 font-bold text-slate-500">Title</span>
               <input
                 type="text"
                 id="title"
@@ -64,5 +64,3 @@ const Todos = () => {
     </div>
   );
 };
-
-export default Todos;
