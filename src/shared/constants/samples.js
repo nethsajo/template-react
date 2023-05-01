@@ -12,16 +12,8 @@ export const SAMPLES = [
   },
   {
     id: nanoid(),
-    title: 'Bankist',
-    description:
-      'Bankist is a fictional online banking application. It has been designed with minimalism in mind to offer a streamlined banking experience to its users.',
-    link: '/',
-  },
-  {
-    id: nanoid(),
-    title: 'Expense Tracker',
-    description:
-      'Managing your expenses has never been easier. You can easily log your spending and keep track of your transactions all in one place!',
-    link: '/',
+    title: 'Basic Authentication',
+    description: 'A simple login with validations such as password strength requirements.',
+    link: ROUTES.LOGIN,
   },
 ];

@@ -1,3 +1,5 @@
+import { useUserStore } from '@Shared/store';
+
 import { loginSchema } from '../validations';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -13,7 +15,12 @@ export const Login = () => {
     },
   });
 
-  const handleLogin = data => console.log(data);
+  const login = useUserStore(state => state.login);
+
+  const handleLogin = data => {
+    const validated = loginSchema.safeParse(data);
+    if (validated.success) login(validated.data.email);
+  };
 
   return (
     <div className="flex flex-col items-center justify-center gap-11 px-6 py-9 sm:px-12">
@@ -25,7 +32,7 @@ export const Login = () => {
             <label htmlFor="title" className="mb-2 flex flex-col">
               <span className="mb-2 font-bold text-slate-500">Email</span>
               <input
-                type="email"
+                type="text"
                 id="email"
                 className="w-full rounded-sm bg-gray-100 px-4 py-2 font-medium text-slate-500 outline-none"
                 {...register('email')}

@@ -55,6 +55,7 @@ module.exports = {
     ],
     'arrow-body-style': ['off', 'as-needed'],
     'no-prototype-builtins': 'off',
+    'no-param-reassign': [2, { props: false }],
     'class-methods-use-this': 'off',
     'linebreak-style': 'off',
     'no-undef': 'error',
