@@ -75,7 +75,7 @@ module.exports = {
         },
       },
     ],
-    'no-console': 'off',
+    'no-console': 'error',
     'require-await': 'off',
   },
 };

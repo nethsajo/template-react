@@ -16,17 +16,23 @@ import { create } from 'zustand';
 
 export const useUserStore = create((set, get) => ({
   /* States */
-  email: null,
+  user: null,
 
   /* Computed */
   computed: {
     get isSignedIn() {
-      return !!get().email;
+      return !!get().user;
     },
   },
 
   /* Functions */
-  login: email => set({ email }),
+  login: payload => {
+    set(state => {
+      return {
+        user: { ...state.user, email: payload.email },
+      };
+    });
+  },
 
   logout: () => {
     set(state => {

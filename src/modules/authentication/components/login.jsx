@@ -19,7 +19,7 @@ export const Login = () => {
 
   const handleLogin = data => {
     const validated = loginSchema.safeParse(data);
-    if (validated.success) login(validated.data.email);
+    if (validated.success) login(validated.data);
   };
 
   return (
