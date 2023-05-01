@@ -1,15 +1,30 @@
 import { RootLayout } from '@Modules/layouts';
 
-import { Suspense } from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import React, { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 
 import routes from '~react-pages';
 
 const App = () => {
+  const [queryClient] = React.useState(
+    () =>
+      new QueryClient({
+        defaultOptions: {
+          queries: {
+            retryDelay: 1250,
+            staleTime: 1000 * 60 * 10,
+          },
+        },
+      })
+  );
+
   return (
-    <RootLayout>
-      <Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</Suspense>
-    </RootLayout>
+    <QueryClientProvider client={queryClient}>
+      <RootLayout>
+        <Suspense fallback={<p>Loading...</p>}>{useRoutes(routes)}</Suspense>
+      </RootLayout>
+    </QueryClientProvider>
   );
 };
 

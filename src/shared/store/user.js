@@ -16,12 +16,12 @@ import { create } from 'zustand';
 
 export const useUserStore = create((set, get) => ({
   /* States */
-  user: null,
+  user: { email: null },
 
-  /* Computed */
+  /* Computed/Derived values */
   computed: {
     get isSignedIn() {
-      return !!get().user;
+      return !!get().user.email;
     },
   },
 
@@ -33,6 +33,15 @@ export const useUserStore = create((set, get) => ({
       };
     });
   },
+
+  /* Instead of spreading the object, we can also use the immer */
+  // login: payload => {
+  //   set(
+  //     immer(state => {
+  //       state.user.email = payload.email;
+  //     })
+  //   );
+  // },
 
   logout: () => {
     set(state => {
