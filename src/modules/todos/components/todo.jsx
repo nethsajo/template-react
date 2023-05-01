@@ -1,9 +1,9 @@
 import { RxPencil1, RxTrash } from 'react-icons/rx';
 
-const Todo = () => {
+const Todo = ({ title }) => {
   return (
     <div className="flex items-center rounded-md bg-[#f2f4f7] p-4">
-      <span className="flex-1">Test</span>
+      <span className="flex-1">{title}</span>
       <div className="ml-auto flex items-center space-x-4">
         <button
           type="button"

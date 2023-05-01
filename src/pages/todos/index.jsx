@@ -1,14 +1,13 @@
 import { Todos } from '@Modules/todos';
-import { TodoService } from '@Modules/todos/services';
+import { useGetTodos } from '@Modules/todos/hooks';
 
 const TodosPage = () => {
   const params = { limit: 10 };
-  const todos = TodoService.list(params);
+  const { data: todos = [], isLoading } = useGetTodos(params);
 
-  // eslint-disable-next-line no-console
-  console.log(todos);
+  if (isLoading) return <div>Loading...</div>;
 
-  return <Todos />;
+  return <Todos todos={todos} />;
 };
 
 export default TodosPage;
