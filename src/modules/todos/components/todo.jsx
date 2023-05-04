@@ -1,9 +1,14 @@
-import { RxPencil1, RxTrash } from 'react-icons/rx';
+import { ROUTES } from '@Shared/constants/common';
 
-const Todo = ({ title }) => {
+import { RxPencil1, RxTrash } from 'react-icons/rx';
+import { Link } from 'react-router-dom';
+
+const Todo = ({ id, title }) => {
   return (
     <div className="flex items-center rounded-md bg-[#f2f4f7] p-4">
-      <span className="flex-1">{title}</span>
+      <Link to={`${ROUTES.TODOS}/${id}`} className="flex-1">
+        {title}
+      </Link>
       <div className="ml-auto flex items-center space-x-4">
         <button
           type="button"

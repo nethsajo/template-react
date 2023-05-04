@@ -11,7 +11,7 @@ export const Todos = ({ todos }) => {
         <div className="space-y-4">
           {todos.map(todo => {
             const title = todo.title[0].toUpperCase() + todo.title.slice(1);
-            return <Todo key={todo.id} title={title} />;
+            return <Todo key={todo.id} id={todo.id} title={title} />;
           })}
         </div>
       </div>
