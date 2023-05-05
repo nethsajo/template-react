@@ -8,6 +8,12 @@ class TodoClass {
 
     return data;
   }
+
+  async get(id) {
+    const { data } = await axios.get(`https://jsonplaceholder.typicode.com/todos/${id}`);
+
+    return data;
+  }
 }
 
 export const TodoService = new TodoClass();

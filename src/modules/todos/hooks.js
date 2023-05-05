@@ -8,3 +8,10 @@ export const useGetTodos = params => {
     queryFn: () => TodoService.list(params),
   });
 };
+
+export const useGetTodo = id => {
+  return useQuery({
+    queryKey: ['todos', id],
+    queryFn: () => TodoService.get(id),
+  });
+};
