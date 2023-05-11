@@ -22,6 +22,10 @@ export default defineConfig({
   ],
   base: '/',
   server: {
+    watch: {
+      usePolling: true,
+    },
+    host: true,
     port: Number(process.env.PORT),
   },
   preview: {
