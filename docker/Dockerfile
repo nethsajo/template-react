@@ -1,3 +1,4 @@
+# Parent Image
 FROM node:16-buster-slim
 
 # Go to /app directory.
@@ -10,10 +11,10 @@ RUN chmod -R 775 /app
 RUN npm i -g pnpm@7.27.1
 
 # Copy all required files for installation.
-COPY . .
+COPY package.json /app
 
-# Install dependencies.
-RUN pnpm i
+# Install all the dependencies.
+RUN pnpm install
 
 # Expose the container to port 3000.
 EXPOSE 4000

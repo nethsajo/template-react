@@ -8,6 +8,15 @@ import svgr from 'vite-plugin-svgr';
 
 config();
 
+const forDockerDevelopment = () => {
+  if (process.env.MACHINE !== 'docker') return {};
+  return {
+    watch: {
+      usePolling: true,
+    },
+  };
+};
+
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -22,9 +31,7 @@ export default defineConfig({
   ],
   base: '/',
   server: {
-    watch: {
-      usePolling: true,
-    },
+    ...forDockerDevelopment(),
     host: true,
     port: Number(process.env.PORT),
   },
@@ -38,6 +45,7 @@ export default defineConfig({
   },
   define: {
     'process.env.PORT': `${process.env.PORT}`,
+    'process.env.MACHINE': `"${process.env.MACHINE}"`,
   },
   optimizeDeps: {
     esbuildOptions: {
