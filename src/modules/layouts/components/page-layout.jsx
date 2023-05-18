@@ -1,4 +1,4 @@
-import { Footer, Navbar } from '@Modules/partials';
+import { Footer, Navbar } from 'modules/partials';
 
 export const PageLayout = ({ children }) => {
   return (

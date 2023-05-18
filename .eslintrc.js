@@ -3,18 +3,6 @@ module.exports = {
     react: {
       version: 'detect',
     },
-    'import/resolver': {
-      alias: {
-        map: [
-          ['@', './src'],
-          ['@Assets', './src/assets'],
-          ['@Modules', './src/modules'],
-          ['@Pages', './src/pages'],
-          ['@Shared', './src/shared'],
-        ],
-        extensions: ['.js', '.jsx'],
-      },
-    },
   },
   env: {
     node: true,
@@ -75,7 +63,7 @@ module.exports = {
         },
       },
     ],
-    'no-console': 'error',
+    'no-console': 'warn',
     'require-await': 'off',
   },
 };

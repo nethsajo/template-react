@@ -1,7 +1,6 @@
-import { ROUTES } from '@Shared/constants/common';
-import { useUserStore } from '@Shared/store';
-
 import { Navigate, useLocation } from 'react-router-dom';
+import { ROUTES } from 'shared/constants/commons';
+import { useUserStore } from 'shared/store';
 
 export const PrivateRoute = ({ children }) => {
   const location = useLocation();

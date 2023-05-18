@@ -1,7 +1,6 @@
-import { ROUTES } from '@Shared/constants/common';
-
 import { RxPencil1, RxTrash } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
+import { ROUTES } from 'shared/constants/commons';
 
 const Todo = ({ id, title }) => {
   return (

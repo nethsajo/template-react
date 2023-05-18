@@ -1,10 +1,9 @@
-import { useUserStore } from '@Shared/store';
-
 import { loginSchema } from '../validations';
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import { RiLockLine } from 'react-icons/ri';
+import { useUserStore } from 'shared/store';
 
 export const Login = () => {
   const { handleSubmit, register, formState } = useForm({

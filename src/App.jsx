@@ -1,6 +1,5 @@
-import { RootLayout } from '@Modules/layouts';
-
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { RootLayout } from 'modules/layouts';
 import React, { Suspense } from 'react';
 import { useRoutes } from 'react-router-dom';
 

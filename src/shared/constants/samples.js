@@ -1,4 +1,4 @@
-import { ROUTES } from './common';
+import { ROUTES } from './commons';
 
 import { nanoid } from 'nanoid';
 

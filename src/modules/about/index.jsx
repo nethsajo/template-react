@@ -1,4 +1,4 @@
-import { PageLayout } from '@Modules/layouts';
+import { PageLayout } from 'modules/layouts';
 
 const About = () => {
   return (

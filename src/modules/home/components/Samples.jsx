@@ -1,6 +1,6 @@
-import { SAMPLES } from '@Shared/constants/samples';
-
 import Card from './Card';
+
+import { SAMPLES } from 'shared/constants/samples';
 
 const Samples = () => {
   return (

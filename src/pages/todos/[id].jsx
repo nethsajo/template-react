@@ -1,5 +1,4 @@
-import { useGetTodo } from '@Modules/todos/hooks';
-
+import { useGetTodo } from 'modules/todos/hooks';
 import { useParams } from 'react-router-dom';
 
 const TodoPage = () => {

@@ -1,8 +1,7 @@
-import { PrivateRoute } from '@Modules/partials';
-
+import { PrivateRoute } from 'modules/partials';
 import React from 'react';
 
-const AsyncAbout = React.lazy(() => import('@Modules/about'));
+const AsyncAbout = React.lazy(() => import('modules/about'));
 
 const AboutPage = () => {
   return (

@@ -1,5 +1,5 @@
-import { Todos } from '@Modules/todos';
-import { useGetTodos } from '@Modules/todos/hooks';
+import { Todos } from 'modules/todos';
+import { useGetTodos } from 'modules/todos/hooks';
 
 const TodosPage = () => {
   const params = { limit: 10 };
