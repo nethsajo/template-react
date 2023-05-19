@@ -26,18 +26,6 @@ jobs:
       - name: Install Packages
         run: pnpm install --frozen-lockfile
 
-      - name: Lint Types
-        run: pnpm ci:lint
-
-      # - name: Run Tests and Generate Coverage
-      #   run: pnpm ci:test
-
-      # - name: Upload Coverage Report
-      #   uses: actions/upload-artifact@v2
-      #   with:
-      #     name: coverage
-      #     path: coverage/
-
   sonarcloud:
     needs: test
     runs-on: ubuntu-latest
