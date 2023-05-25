@@ -27,5 +27,13 @@
     "sonarcloud",
     "constneth"
   ],
-  "ignorePaths": ["node_modules", "build", "dist", ".husky", "pnpm-lock.yaml", "package.json"]
+  "ignorePaths": [
+    "node_modules",
+    "nginx",
+    "build",
+    "dist",
+    ".husky",
+    "pnpm-lock.yaml",
+    "package.json"
+  ]
 }

@@ -1,3 +1,4 @@
+import { NodeGlobalsPolyfillPlugin } from '@esbuild-plugins/node-globals-polyfill';
 import react from '@vitejs/plugin-react';
 import { config } from 'dotenv';
 import { defineConfig } from 'vite';
@@ -40,9 +41,26 @@ export default defineConfig({
     outDir: 'build',
     reportCompressedSize: false,
     sourcemap: false,
+    rollupOptions: {
+      external: ['/src/index.jsx'],
+    },
   },
   define: {
     'process.env.PORT': `${process.env.PORT}`,
     'process.env.MACHINE': `"${process.env.MACHINE}"`,
+  },
+  optimizeDeps: {
+    esbuildOptions: {
+      // Node.js global to browser globalThis
+      define: {
+        global: 'globalThis',
+      },
+      // Enable esbuild polyfill plugins
+      plugins: [
+        NodeGlobalsPolyfillPlugin({
+          buffer: true,
+        }),
+      ],
+    },
   },
 });
