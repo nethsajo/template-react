@@ -3,12 +3,10 @@ import React from 'react';
 
 const AsyncAbout = React.lazy(() => import('modules/about'));
 
-const AboutPage = () => {
+export default function AboutPage() {
   return (
     <PrivateRoute>
-      <AsyncAbout />;
+      <AsyncAbout />
     </PrivateRoute>
   );
-};
-
-export default AboutPage;
+}

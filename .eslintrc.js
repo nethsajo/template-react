@@ -35,13 +35,6 @@ module.exports = {
     'react/jsx-fragments': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'react/function-component-definition': [
-      2,
-      {
-        namedComponents: 'arrow-function',
-      },
-    ],
-    'arrow-body-style': ['off', 'as-needed'],
     'no-prototype-builtins': 'off',
     'no-param-reassign': [2, { props: false }],
     'class-methods-use-this': 'off',

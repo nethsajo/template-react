@@ -3,7 +3,7 @@ import Samples from './components/Samples';
 
 import { IoLogoReact } from 'react-icons/io5';
 
-const Home = () => {
+export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center gap-11 px-6 py-9 sm:px-12">
       <IoLogoReact className="h-16 w-16 text-cyan-500 sm:h-24 sm:w-24" />
@@ -14,6 +14,4 @@ const Home = () => {
       <Samples />
     </div>
   );
-};
-
-export default Home;
+}

@@ -5,7 +5,7 @@ import { useRoutes } from 'react-router-dom';
 
 import routes from '~react-pages';
 
-const App = () => {
+export default function App() {
   const [queryClient] = React.useState(
     () =>
       new QueryClient({
@@ -25,6 +25,4 @@ const App = () => {
       </RootLayout>
     </QueryClientProvider>
   );
-};
-
-export default App;
+}

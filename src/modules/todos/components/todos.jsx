@@ -2,7 +2,7 @@ import Todo from './todo';
 
 import { RiTodoLine } from 'react-icons/ri';
 
-export const Todos = ({ todos }) => {
+export function Todos({ todos }) {
   return (
     <div className="flex flex-col items-center justify-center gap-11 px-6 py-9 sm:px-12">
       <RiTodoLine className="h-16 w-16 text-cyan-500 sm:h-24 sm:w-24" />
@@ -17,4 +17,4 @@ export const Todos = ({ todos }) => {
       </div>
     </div>
   );
-};
+}

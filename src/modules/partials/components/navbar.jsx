@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/constants/commons';
 
-export const Navbar = () => {
+export function Navbar() {
   return (
-    <div className="flex h-24 w-full items-center bg-gray-100 px-6">
+    <div className="sticky z-40 flex h-24 w-full items-center bg-gray-100 bg-opacity-75 px-6 backdrop-blur-sm backdrop-saturate-50">
       <div className="container mx-auto flex h-full items-center justify-between">
         <Link to={ROUTES.HOME} className="font-bold">
           TemplateReact
@@ -30,4 +30,4 @@ export const Navbar = () => {
       </div>
     </div>
   );
-};
+}

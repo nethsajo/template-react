@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { IoAdd, IoRemove } from 'react-icons/io5';
 
-const Counter = () => {
+export default function Counter() {
   const [count, setCount] = useState(0);
 
   const handleIncrement = () => setCount(count + 1);
@@ -41,6 +41,4 @@ const Counter = () => {
       </div>
     </div>
   );
-};
-
-export default Counter;
+}

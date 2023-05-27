@@ -2,7 +2,7 @@ import { RxPencil1, RxTrash } from 'react-icons/rx';
 import { Link } from 'react-router-dom';
 import { ROUTES } from 'shared/constants/commons';
 
-const Todo = ({ id, title }) => {
+export default function Todo({ id, title }) {
   return (
     <div className="flex items-center rounded-md bg-[#f2f4f7] p-4">
       <Link to={`${ROUTES.TODOS}/${id}`} className="flex-1">
@@ -24,6 +24,4 @@ const Todo = ({ id, title }) => {
       </div>
     </div>
   );
-};
-
-export default Todo;
+}

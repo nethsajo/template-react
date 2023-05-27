@@ -1,11 +1,12 @@
 import { PageLayout } from 'modules/layouts';
+import { PrivateRoute } from 'modules/partials';
 
-const About = () => {
+export default function About() {
   return (
-    <PageLayout>
-      <div>About</div>
-    </PageLayout>
+    <PrivateRoute>
+      <PageLayout>
+        <div className="mt-12">About</div>
+      </PageLayout>
+    </PrivateRoute>
   );
-};
-
-export default About;
+}

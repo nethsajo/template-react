@@ -5,7 +5,7 @@ import { useForm } from 'react-hook-form';
 import { RiLockLine } from 'react-icons/ri';
 import { useUserStore } from 'shared/store';
 
-export const Login = () => {
+export function Login() {
   const { handleSubmit, register, formState } = useForm({
     resolver: zodResolver(loginSchema),
     defaultValues: {
@@ -69,4 +69,4 @@ export const Login = () => {
       </div>
     </div>
   );
-};
+}

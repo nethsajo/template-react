@@ -1,11 +1,11 @@
 import { Footer, Navbar } from 'modules/partials';
 
-export const PageLayout = ({ children }) => {
+export function PageLayout({ children }) {
   return (
     <>
       <Navbar />
-      <main className="main-container">{children}</main>
+      <main>{children}</main>
       <Footer />
     </>
   );
-};
+}
