@@ -44,7 +44,12 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/no-cycle': 'off',
     'import/no-unresolved': 'off',
-    'import/no-extraneous-dependencies': 'off',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: true,
+      },
+    ],
     'import/order': [
       'error',
       {
@@ -56,7 +61,6 @@ module.exports = {
         },
       },
     ],
-    'no-console': 'warn',
     'require-await': 'off',
   },
 };
